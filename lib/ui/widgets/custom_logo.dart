@@ -3,8 +3,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomLogo extends StatelessWidget {
   final String title;
+  final String? trailingText;
 
-  const CustomLogo(this.title, {Key? key}): super(key: key);
+  const CustomLogo(
+    this.title, {
+    super.key,
+    this.trailingText,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +20,26 @@ class CustomLogo extends StatelessWidget {
           height: 70,
           width: 70,
         ),
-        Text(
-          title,
-          style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text(
+              title,
+              style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+            ),
+            if (trailingText != null && trailingText!.trim().isNotEmpty) ...[
+              const SizedBox(width: 8),
+              Text(
+                trailingText!,
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black54,
+                ),
+              ),
+            ],
+          ],
         ),
       ],
     );
