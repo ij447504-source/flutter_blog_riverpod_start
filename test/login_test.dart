@@ -1,0 +1,8 @@
+import 'package:flutter_blog/data/repository/user_repository.dart';
+
+// eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpbWdVcmwiOiIvaW1hZ2VzLzEucG5nIiwic3ViIjoibWV0YWNvZGluZyIsImlkIjoxLCJleHAiOjE3NzgzNzI1NTAsInVzZXJuYW1lIjoic3NhciJ9.dYqN40YBmTtNlv-UpLE6V7btIGqCLvkoEbR-v1tTN8cKwx7rZPsJroKWuIExcFEkqqyJWCkb10NEVFz-io7_Yw
+void main() async {
+  UserRepository repo = UserRepository.instance;
+  await repo.autoLogin(
+      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpbWdVcmwiOiIvaW1hZ2VzLzEucG5nIiwic3ViIjoibWV0YWNvZGluZyIsImlkIjoxLCJleHAiOjE3NzgzNzMzMzksInVzZXJuYW1lIjoic3NhciJ9.C6zlrxQWiEnwQKvGgFhbNwTXbm3tNeTPfIQeAr2Yv4vs23d8Jx7dpLJlchtERW19wWK3glL4VPzL5jFzoJxNQA");
+}
