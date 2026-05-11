@@ -18,13 +18,9 @@ class PostListPage extends ConsumerWidget {
       key: scaffoldKey,
       drawer: CustomNavigation(scaffoldKey),
       appBar: AppBar(
-        title: Text("Blog ${sessionUser.username ?? "로그인 안됨"}"),
+        title: Text("Blog ${sessionUser.username ?? "로긴안됨"}"),
       ),
-      body: RefreshIndicator(
-        key: refreshKey,
-        onRefresh: () async {},
-        child: PostListBody(),
-      ),
+      body: PostListBody(),
     );
   }
 }

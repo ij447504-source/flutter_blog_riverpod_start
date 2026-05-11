@@ -37,8 +37,9 @@ class CustomNavigation extends ConsumerWidget {
               const Divider(),
               TextButton(
                 onPressed: () {
+                  ref.read(sessionProvider.notifier).logout();
+
                   scaffoldKey.currentState!.openEndDrawer();
-                  ref.read(sessionProvider.notifier).logOut();
                   Navigator.popAndPushNamed(context, Move.loginPage);
                 },
                 child: const Text(

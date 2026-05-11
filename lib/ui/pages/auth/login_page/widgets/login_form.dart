@@ -17,6 +17,7 @@ class LoginForm extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     SessionGVM gvm = ref.read(sessionProvider.notifier);
+
     return Form(
       key: _formKey,
       child: Column(
@@ -36,8 +37,14 @@ class LoginForm extends ConsumerWidget {
           CustomElevatedButton(
               text: "로그인",
               funPageRoute: () async {
+                print("username : ${_username.text}");
+                print("password : ${_password.text}");
+
                 await gvm.login(_username.text.trim(), _password.text.trim());
-                Navigator.popAndPushNamed(context, Move.postListPage);
+
+                // if (_formKey.currentState!.validate()) {
+                //   Navigator.popAndPushNamed(context, Move.postListPage);
+                // }
               }),
         ],
       ),

@@ -1,8 +1,11 @@
 import 'package:dio/dio.dart';
 
-final dio = Dio(BaseOptions(
-  baseUrl: "http://192.168.0.123:8080",
-  contentType: "application/json; charset=utf-8",
-  // headers: "",
-  validateStatus: (status) => true,
-));
+final baseUrl = "http://192.168.0.99:8080";
+
+final dio = Dio(
+  BaseOptions(
+    baseUrl: baseUrl,
+    contentType: "application/json; charset=utf-8",
+    validateStatus: (status) => true,
+  ),
+);

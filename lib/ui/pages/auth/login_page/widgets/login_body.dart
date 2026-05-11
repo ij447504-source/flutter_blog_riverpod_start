@@ -12,8 +12,8 @@ class LoginBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // then 방식 있음음
     ref.read(sessionProvider.notifier).autoLogin();
+
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: ListView(

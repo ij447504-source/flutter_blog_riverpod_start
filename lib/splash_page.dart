@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/ui/pages/auth/login_page/login_page.dart';
 
-// ConsumerStateFfulwidget
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
@@ -10,6 +9,7 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+
   @override
   void initState() {
     super.initState();
@@ -25,6 +25,7 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       body: Center(
         child: Image.asset(
